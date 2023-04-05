@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>catch! I catch {{throw}}</h2>
+<form action="{% url 'throw_loops:third' %}" method="POST">
+    {% csrf_token %}
+    <h2>
+        <label for="throw1">and throw!</label>
+        <input type="text" id="throw1" name="throw1">
+        <label for="throw2">twice!</label>
+        <input type="text" id="throw2" name="throw2">
+        <input type="submit" value="휙">
+    </h2>
+</form>
+
+{% endblock content %}

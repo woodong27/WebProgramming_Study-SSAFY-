@@ -1,0 +1,41 @@
+.chessboard{
+    border:2px solid black;
+    width: 800px;
+    height: 800px;
+    display:table;
+}
+
+.whiteblock{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display:table-cell;
+}
+
+.blackblock{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display:table-cell;
+}
+
+.queen{
+    background-image: url("daily_02_4\ 참고/white_queen.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.king {
+    background-image: url("./daily_02_4\ 참고/white_king.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}
+
+.rook {
+    background-image: url("./daily_02_4\ 참고/white_rook.png");
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+}

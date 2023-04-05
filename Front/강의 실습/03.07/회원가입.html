@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>회원가입</title>
+    </head>
+    <body>
+        <form action="">
+            <h1>회원가입 양식 만들기</h1>
+            <div>이름<input type="text"></div>
+            <div>아이디<input type="text"></div>
+            <div>비밀번호<input type="password"></div>
+            <div>
+                <input type="radio" name="gender" checked> 남 
+                <input type="radio" name="gender"> 여 
+            </div>
+            <div>
+                취미 <select name="hobby">
+                    <option value="">--목록에서 선택--</option>
+                    <option value="코딩">코딩</option>
+                    <option value="낮잠">낮잠</option>
+                </select>
+            </div>
+            <!-- <input type="button" value="제출하기"> -->
+            <!--submit을 사용하면 제출한 내용이 서버로 제출됨
+                누르면 기본적으로 새로고침 되고 자바스크립트를 써서 새로고침을 막을 수 있음-->
+            <div><input type="submit" value="제출하기"></div>
+        </form>
+
+        <!--ifram : 웹 사이트 링크나 영상을 넣어줄 수 있음-->
+        <!-- <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ZSxdM2a1kzg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </p> -->
+    </body>
+</html>

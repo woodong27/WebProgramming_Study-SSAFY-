@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>{{first}} + {{second}} = {{first|add:second}}</div>
+<div>{{first}} * {{second}} = {{mul}}</div>
+<div>{{first}} - {{second}} = {{sub}}</div>
+<div>
+    {% if div == 0 %}
+        계산할 수 없습니다
+    {% else %}
+        {{first}} / {{second}} = {{div}}
+    {% endif %}
+</div>
+{% endblock content %}

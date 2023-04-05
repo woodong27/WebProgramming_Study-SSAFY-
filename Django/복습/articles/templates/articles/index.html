@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h3>Hello, {{user}}</h3>
+    <a href="{% url 'accounts:logout' %}">LOGOUT</a>
+    <a href="{% url 'accounts:update' %}">회원정보수정</a>
+    <form action="{% url 'accounts:delete' %}" method='POST'>
+        {% csrf_token %}
+        <input type="submit" value="회원탈퇴">
+    </form>
+{% else %}
+    <a href="{% url 'accounts:login' %}">LOGIN</a>
+    <a href="{% url 'accounts:signup' %}">회원가입</a>
+{% endif %}
+<hr>
+<h2>INDEX</h2>
+<hr>
+<a href="{% url 'articles:create' %}">글쓰기</a>
+<hr>
+{% for article in articles %}
+    <div>번호 : {{article.pk}}</div>
+    <div>제목 : <a href="{% url 'articles:read' article.pk %}">{{article.title}}</a></div>
+    <hr>
+{% endfor %}
+
+{% endblock content %}

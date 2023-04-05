@@ -1,0 +1,98 @@
+header{
+    width: 500px;
+}
+.warn {
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    background-color: red;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 15px;
+}
+.title{
+    font-weight: bold;
+    font-size: 40px;
+    margin: 15px auto;
+}
+hr{
+    border: 0px;
+    height: 1px;
+    background-color: lightgray;
+    margin-bottom: 15px;
+}
+
+.container{
+    display: flex;
+    border: 1px solid lightgray;
+    width: 500px;
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.signin{
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 18px;
+    align-self: center;
+}
+
+.bluehr{
+    border: 1px solid blue;
+    width: 499px;
+    margin-bottom: 30px;
+}
+
+.namepw {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 23px;
+    margin-bottom: 10px;
+}
+
+.inputbox{
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    height: 35px;
+    align-self: center;
+    width: 450px;
+    margin-bottom: 20px;
+}
+
+.tempbox{
+    display: flex;
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.checkbox{
+    margin-left: 23px;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    align-items: center;
+    margin-top: 2px;
+}
+
+.remember{
+    align-items: center;
+}
+
+.forgot {
+    align-items: center;
+    margin-left: 155px;
+    color: blue;
+}
+
+.signbox{
+    height: 40px;
+    line-height: 40px;
+    background-color: green;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    margin: 0px 23px;
+    margin-bottom: 25px;   
+}

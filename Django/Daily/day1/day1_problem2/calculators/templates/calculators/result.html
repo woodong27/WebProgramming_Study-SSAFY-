@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>계산 결과</h1>
+    <div>{{first}} + {{second}} = {{first|add:second}}</div>
+    <div>{{first}} * {{second}} = {{mul}}</div>
+    <div>{{first}} - {{second}} = {{sub}}</div>
+    {% if second == 0 %}
+        <div>계산할 수 없습니다.</div>
+    {% else %}
+        <div>{{first}} / {{second}} = {{div}}</div>
+    {% endif %}
+    <a href="{% url 'calculators:calculation' %}">다시 입력</a>
+{% endblock content %}

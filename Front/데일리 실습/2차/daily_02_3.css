@@ -1,0 +1,20 @@
+.chessboard{
+    border:2px solid black;
+    width: 800px;
+    height: 800px;
+    display:table;
+}
+
+.whiteblock{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    display:table-cell;
+}
+
+.blackblock{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    display:table-cell;
+}

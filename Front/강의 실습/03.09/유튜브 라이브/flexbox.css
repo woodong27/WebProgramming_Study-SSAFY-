@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    background-color: cyan;
+    height: 300px;
+    flex-wrap: wrap;
+}
+
+.item {
+    background-color: greenyellow;
+    border: 2px soild black;
+    font-size: 20px;
+    margin-right: 4px;
+    flex-shrink: 5;
+}

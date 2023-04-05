@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>주문해주세요!</h2>
+<hr>
+{% for food in foods %}
+<div>{{forloop.counter}}번째 음식 : {{food}}</div><br>
+{% endfor %}
+<form action="{% url 'menus:receipt' %}" method="POST">
+    {% csrf_token %}
+    <label for="order">주문란 : </label>
+    <input type="text" id="order" name="order">
+    <input type="submit" value="주문하기">
+</form>
+{% endblock content %}

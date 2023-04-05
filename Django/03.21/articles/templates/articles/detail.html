@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{article.pk}}번째 글의 DETAIL</h2>
+<hr>
+<div>제목 : {{article.title}}</div>
+<div>내용 : {{article.content}}</div>
+<div>생성 시각 : {{article.created_at}}</div>
+<div>수정 시각 : {{article.updated_at}}</div>
+<div>{{article.created_at|date:"Y년 m월 d일 (D) A f"}}</div>
+<hr>
+<a href="{% url 'articles:index' %}">목록</a>
+<a href="{% url 'articles:update' article.pk %}">수정</a>
+<a href="{% url 'articles:delete' article.pk %}">삭제</a>
+{% endblock content %}
