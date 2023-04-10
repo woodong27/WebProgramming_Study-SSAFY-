@@ -131,3 +131,11 @@ ORDER BY age DESC, balance;
 SELECT first_name, balance
 FROM users
 WHERE first_name!='NULL' AND balance>400;
+
+--phone 값이 null인 사람들의 정보를 알 수 없음으로 수정하고 전체 데이터 조회
+UPDATE users
+SET phone='알 수 없음'
+WHERE phone IS NULL;
+
+SELECT *
+FROM users;
