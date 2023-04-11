@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Todo</h1>
+<hr>
+{% if todos %}
+<ul>
+    {% for todo in todos %}
+    <li>
+        <p>{{todo.author}} - {{todo.title}}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>작성된 글이 없습니다.</p>
+{% endif %}
+{% endblock content %}
