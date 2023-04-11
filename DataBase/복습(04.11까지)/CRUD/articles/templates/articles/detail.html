@@ -35,20 +35,26 @@
       {% for comment in comments %}
       <li>
         {{comment.content}}
+        {% if request.user == comment.user %}
         <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method='POST'>
           {% csrf_token %}
           <input type="submit" value="DELETE">
         </form>
+        {% endif %}
       </li>
       {% empty %}
       <p>댓글을 작성해주세요.</p>
       {% endfor %}
     </ul>
     <hr>
+    {% if request.user.is_authenticated %}
     <form action="{% url 'articles:comments_create' article.pk %}" method='POST'>
       {% csrf_token %}
       {{commentForm}}
       <input type="submit" value='submit'>
     </form>
+    {% else %}
+    <a href="{% url 'accounts:login' %}">[댓글을 작성하려면 로그인하세요.]</a>
+    {% endif %}
   </div>
 {% endblock content %}
