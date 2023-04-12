@@ -1,0 +1,32 @@
+[
+{
+    "model": "articles.article",
+    "pk": 1,
+    "fields": {
+        "user": 2,
+        "title": "woo2로 작성(1)",
+        "content": "내용",
+        "image": "",
+        "created_at": "2023-04-12T10:52:29.534Z",
+        "updated_at": "2023-04-12T10:52:29.534Z",
+        "like_users": [
+            1
+        ]
+    }
+},
+{
+    "model": "articles.article",
+    "pk": 2,
+    "fields": {
+        "user": 1,
+        "title": "woo1로 작성(1)",
+        "content": "내용",
+        "image": "",
+        "created_at": "2023-04-12T10:53:27.808Z",
+        "updated_at": "2023-04-12T10:53:27.808Z",
+        "like_users": [
+            1
+        ]
+    }
+}
+]
