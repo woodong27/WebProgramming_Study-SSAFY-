@@ -88,3 +88,8 @@ LIMIT 5;
 SELECT rowid, first_name
 FROM users
 LIMIT 10 OFFSET 10;
+
+--성이 이씨
+SELECT last_name, first_name
+FROM users
+WHERE last_name LIKE '이';
