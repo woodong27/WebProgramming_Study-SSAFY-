@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS DOM</title>
+</head>
+<style>
+  .red {
+    color: red;
+  }
+
+  .big {
+    font-size: 32px;
+  }
+</style>
+<body>
+  <h1>selector test</h1>
+
+  <button id="event-button">커져라!</button>
+
+  <ul id="list">
+    <li class="red">apple</li>
+    <li>orange</li>
+    <li id="banana">banana</li>
+    <li>grape</li>
+    <li class="red">strawberry</li>
+  </ul>
+  <script>
+    //1. strawberry아래에 새로운 과일 하나 추가
+    //새로운 li를 생성
+    const newfruit=document.createElement('li')
+    newfruit.innerText='망고'
+    //망고를 추가할 부모를 불러옴
+    const parent=document.querySelector('ul')
+    //부모에 newfruit 추가
+    parent.appendChild(newfruit)
+
+    //2. apple위에 새로운 과일 추가
+    const newfruit2=document.createElement('li')
+    newfruit2.innerText='파인애플'
+    //prepend : 가장 앞에 새로운 node 추가
+    parent.prepend(newfruit2)
+
+    //3. orange와 banana사이에 새로운 과일 추가
+    const newfruit3=document.createElement('li')
+    newfruit3.innerText='키위'
+    const banana=document.querySelector('#banana')
+    parent.insertBefore(newfruit3, banana)
+
+    //4. class가 red인 노드 모두 삭제
+    const redList=document.querySelectorAll('.red')
+    redList.forEach(element => {
+      element.remove()
+    })
+
+    /*
+    //5. 모든 li태그의 글자 크기를 키우기 (big 클래스 사용)
+    const liTags=document.querySelectorAll('li')
+    liTags.forEach(element => {
+      element.classList.add('big')
+    })
+    */
+
+    //6. 버튼을 누르면 event 실행하기
+    const button=document.querySelector('#event-button')
+    //특정 행동에 따라서 event 발생
+    //'click'이 발생했을 때 changeFont라는 함수 실행
+    addEventListener('click', () => {
+      changeFont()
+    })
+
+    function changeFont() {
+      const LiTags=document.querySelectorAll('li')
+      LiTags.forEach(element => {
+        element.classList.add('big')
+      })
+    }
+
+  </script>
+</body>
+</html>

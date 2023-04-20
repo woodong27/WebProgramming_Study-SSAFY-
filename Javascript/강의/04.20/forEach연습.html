@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="fruits-list">
+        
+    </ul>
+    <script>
+        //fruits-list에 fruits의 원소들을 하나씩 추가하기
+        const fruits=['Apple', 'Banana', 'Orange']
+        const parent=document.querySelector('#fruits-list')
+        fruits.forEach(element => {
+            const liTag=document.createElement('li')
+            liTag.innerText=element
+            parent.appendChild(liTag)
+        })
+    </script>
+</body>
+</html>
