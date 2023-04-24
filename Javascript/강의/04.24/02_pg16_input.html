@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="text-input">
+  <p></p>
+  <script>
+    //글씨를 입력할 때 마다 이벤트가 발생하게
+    // 1. input 선택
+    const textinput=document.querySelector('input')
+    // 2. input 이벤트 등록
+    textinput.addEventListener('input', function() {
+      console.log(event)
+      console.log(event.target) //input태그
+      console.log(event.target.value) //한 글자 입력할 때마다 문자열이 더해지면서 출력됨
+
+      //p태그에다가 입력받은 문자를 출력해줌
+      const pTag=document.querySelector('p')
+      pTag.innerText=event.target.value
+    })
+      // input은 이벤트의 대상
+
+      // input의 value를 받아오기
+
+      // 3. input에 작성한 값을 p 태그에 출력하기
+
+  </script>
+</body> 
+
+</html>

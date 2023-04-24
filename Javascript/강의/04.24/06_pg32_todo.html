@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="#">
+    <input type="text" class="inputData">
+    <input type="submit" value="Add">
+  </form>
+  <ul></ul>
+
+  <script>
+    const formTag=document.querySelector('form')
+    // form에서 제출을 누르면 이벤트가 실행
+    const addTodo=function(event) {
+      event.preventDefault() //기본 form의 제출 기능을 막기
+      // inputData에 입력된 값을 가져와서 아래에 li로 추가해줌
+      const inputTag=document.querySelector('.inputData')
+      const data=inputTag.value
+
+      // 입력받은 데이터가 공백이 아닐때 실행
+      if (data.trim()){
+        const liTag=document.createElement('li')
+        liTag.innerText=data
+        // ul태그를 가져와서 li태그를 그 자식으로 추가해줌
+        const ulTag=document.querySelector('ul')
+        ulTag.appendChild(liTag)
+  
+        // input버튼을 누르면 입력된 글씨가 사라지도록
+        event.target.reset()
+      }
+      
+      // 아무것도 입력하지 않았을 때 경고창 띄우기
+      else{
+        alert('입력하세요')
+      }
+      
+    }
+    formTag.addEventListener('submit', addTodo)
+  </script>
+</body>
+</html>

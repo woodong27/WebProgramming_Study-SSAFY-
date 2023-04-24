@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="오프라인.js"></script>
+    <style>
+        .red{color:red;}
+    </style>
+</head>
+
+<body>
+    <button class="color">[주의]<br>누르지 마시오</button>
+    <br>
+
+    <input type="text">
+    <p></p>
+    <br>
+
+    <!-- 전파가 발생해서 c만 눌러도 a랑 b가 눌렸을 때의 이벤트가 발생하게 됨 -->
+    <!-- 기본적으로 하위 노드의 값이 상위 노드로 전파됨 -->
+    <div class="a" style="border : 2px solid black; height:100px;">
+        <div class="b" style="border : 2px solid blue; height:70px;">
+            <span class="c" style="border : 2px solid green; height:50px;">test</span>
+        </div>
+    </div>
+    <br>
+
+    <!-- 화살표 함수, this 실습 -->
+    <button class="last">this 실습</button>
+
+</body>
+</html>
