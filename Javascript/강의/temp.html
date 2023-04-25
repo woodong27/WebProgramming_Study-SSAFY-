@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <button>[주의]<br>누르지 마시오</button>
+
+    <script>
+        const btn=document.querySelector('button')
+
+        // 1. classList.add
+        btn.classList.add('blue')
+
+        // 2. setAttribute
+        btn.setAttribute('style','color:red;')
+    </script>
+</body>
+</html>
