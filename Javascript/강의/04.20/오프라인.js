@@ -265,7 +265,7 @@
 
 
 //짝수인 애들만 찾아서 제곱해서 출력
-const arr=[1,2,3,4,5]
+const arr1=[1,2,3,4,5]
 
 // arr.forEach(num => {
 //     if(num%2===0){
@@ -274,10 +274,10 @@ const arr=[1,2,3,4,5]
 // })
 
 //map 사용법
-const temp=arr.map(num => num**2)
+const temp=arr1.map(num => num**2)
 console.log(temp)
 
 //결과물
 //배열 고차함수는 성능은 안좋을 수 있지만 가독성에서 훨씬 좋음
-const ans=arr.filter(num => !(num%2)).map(filtered => filtered**2)
+const ans=arr1.filter(num => !(num%2)).map(filtered => filtered**2)
 console.log(ans)

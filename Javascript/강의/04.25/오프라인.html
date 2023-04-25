@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        /*
+        // Promise 예제
+        const obj=new Promise((resolve, reject) => {
+            resolve(3)
+        })
+
+        obj.then(result1 => {
+            return result1+3
+        }).then(result2 => {
+            console.log(result2)
+        }).catch(error => {
+            console.log(error)
+        }).finally(()=>{
+            console.log('제 작업은 끝났습니다.')
+        })
+        */
+
+        
+        //axios로 promise를 사용했을 때
+        /* 
+        function getData(){
+            const obj=axios.get('https://jsonplaceholder.typicode.com/todos/1')
+            obj.then(response => {
+                console.log(response.data)
+            })
+        } */
+
+        //async, await를 썼을 때
+        async function getData(){
+            const obj = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+            console.log(obj.data)
+            console.log(obj.data.title)
+        }
+        getData()
+    </script>
+</body>
+</html>

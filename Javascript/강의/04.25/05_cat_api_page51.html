@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <button>야옹아 이리온</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+      //버튼을 누르면 고양이 사진이 나오도록
+      console.log('고양이는 야옹')
+      const catImageSearchURL = 'https://api.thecatapi.com/v1/images/search'
+      
+      //버튼 가져오기
+      const btn=document.querySelector('button')
+      btn.addEventListener('click', function() {
+        axios.get(catImageSearchURL)
+          .then((response) => {
+            console.log(response.data)
+            //가져온 이미지를 img tag로 만들어서 넣어주기
+            imgE=document.createElement('img')
+            imgE.setAttribute('src', response.data[0].url)
+            //body의 자식으로 이미지를 넣어줌
+            document.body.appendChild(imgE)
+          })
+          .catch((error) => {
+            console.log('실패했다옹')
+          })
+  
+        console.log('야옹야옹')
+      })
+
+
+
+  </script>
+  
+</body>
+</html>
