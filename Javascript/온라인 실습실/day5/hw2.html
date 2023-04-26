@@ -8,13 +8,22 @@
 </head>
 <body>
   <script>
-    console.log('Hi')
-
-    setTimeout(function () {
-      console.log('SSAFY')
-    }, 3000)
-
-    console.log('Bye')
+    new Promise((resolve, reject) => {
+      resolve()
+    })
+    .then(response => {
+      console.log('Hi')
+      return response
+    })
+    .then(response => {
+      setTimeout(function() {
+        console.log('SSAFY')
+        return response
+      }, 3000)
+    })
+    .then(response => {
+      console.log('Bye')
+    })
   </script>
 </body>
 </html>
