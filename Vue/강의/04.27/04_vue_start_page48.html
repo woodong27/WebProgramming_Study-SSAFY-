@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <p>{{ message }}</p>
+    <p></p>
+  </div>
+
+  <!-- Vue CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+  <script>
+    const app=new Vue({
+      el:'#app', 
+      data:{
+        message:'Hello, Vue!'
+      },
+      methods:{
+        print() {
+          console.log(this.message)
+        },
+        //method를 호출해서 data를 변경할 수 있음
+        //arrow function은 this가 상위 스코프를 가르키기 때문에 사용하면 안됨
+        //호출은 되지만 원하는 대로 data를 변경할 수 없음
+        bye() {
+          this.message='Bye, Vue!'
+        },
+        hello() {
+          this.message='Hello, Vue!'
+        }
+      },
+    })
+
+  </script>
+</body>
+</html>
