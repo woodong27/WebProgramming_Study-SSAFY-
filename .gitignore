@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,python,django,vue,vuejs,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,python,django,vue,vuejs,node
 
+## 복습한건 안올리기
+복습/
+
 ### Django ###
 *.log
 *.pot
