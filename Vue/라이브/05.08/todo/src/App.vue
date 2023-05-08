@@ -2,10 +2,11 @@
   <div id="app">
     <h1>Todo</h1>
     <h1>총 할일 : {{ allTodoCount }}</h1>
-    <h1>완료된 할일 : </h1>
-    <h1>남은 할일 : </h1>
+    <h1>완료된 할일 : {{ completedCount }}</h1>
+    <h1>남은 할일 : {{ notCompletedCount }}</h1>
     <TodoForm/>
     <TodoList />
+    <br>
     <button @click="loadTodos">할일 불러오기</button>
   </div>
 </template>
@@ -24,7 +25,12 @@ export default {
     allTodoCount() {
       return this.$store.getters.alltodosCount
     },
-    
+    completedCount() {
+      return this.$store.getters.completedCount
+    },
+    notCompletedCount() {
+      return this.$store.getters.notCompletedCount
+    }
   },
   methods: {
     loadTodos() {

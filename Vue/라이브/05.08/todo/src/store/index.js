@@ -13,7 +13,12 @@ export default new Vuex.Store({
       return state.todos.length
     },
     completedCount(state) {
-      
+      const completedTodos=state.todos.filter(todo=>todo.isCompleted)
+      return completedTodos.length
+    },
+    notCompletedCount(state) {
+      const notCompletedTodos=state.todos.filter(todo=>!(todo.isCompleted))
+      return notCompletedTodos.length
     }
   },
   mutations: {
