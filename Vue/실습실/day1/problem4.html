@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>점심 메뉴</h1>
+        <button id="lunch" @click="selectMenu">Pick One</button>
+        <div id="menu"></div>
+        <hr>
+        <h1>로또</h1>
+        <button id="lotto" @click="selectNumbers">Get Lucky Numbers</button>
+        <div id="lottoResult"></div>
+    </div>
+
+    <!-- lodash CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <!-- 개발버전, 도움되는 콘솔 경고를 포함. -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app=new Vue({
+            el: '#app',
+            data: {
+                lunchMenu: ['국밥', '치킨', '햄버거', '피자', '김치찌개']
+            },
+            methods: {
+                selectMenu() {
+                    const result=document.querySelector('#menu')
+                    const selectedLunch=_.sample(this.lunchMenu)
+                    result.innerText=selectedLunch
+                },
+                selectNumbers() {
+                    const result=document.querySelector('#lottoResult')
+                    const selectedNumbers=_.sampleSize(_.range(1,46),6)
+                    result.innerText=`[${selectedNumbers}]`
+                }
+            }
+        })
+    </script>
+</body>
+</html>
