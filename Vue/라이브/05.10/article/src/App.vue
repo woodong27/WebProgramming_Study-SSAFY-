@@ -1,10 +1,5 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link :to="{ name: 'home' }">Home</router-link> |
-      <router-link :to="{ name: 'about' }">About</router-link> |
-      <router-link :to="{ name: 'hello', params: { userName: 'woong'}}">Hello</router-link> |
-    </nav>
     <router-view/>
   </div>
 </template>

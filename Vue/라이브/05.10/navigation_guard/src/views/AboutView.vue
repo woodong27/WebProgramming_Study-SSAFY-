@@ -2,7 +2,7 @@
   <div class="about">
     <h1>This is an about page</h1>
     <router-link :to="{ name: 'home'}">HOME</router-link> |
-    <button @click="toHome">홈으로</button>
+    <button @click="toHome">홈으로</button><br><hr>
     <input type="text" @keyup.enter="goToHello" v-model="inputData">
   </div>
 </template>

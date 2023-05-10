@@ -13,5 +13,10 @@ export default {
         }
     },
     // CODE HERE
+    // Component Guard
+    beforeRouteUpdate(to, from, next) {
+        this.userName=to.params.userName
+        next()
+    }
 }
 </script>
