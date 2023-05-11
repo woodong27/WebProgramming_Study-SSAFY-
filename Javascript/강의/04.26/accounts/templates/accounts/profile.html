@@ -61,7 +61,7 @@
     event.preventDefault()
     //어느 유저인지 알기 위한 pk를 받아옴
     const userId=event.target.dataset.userId
-
+    
     axios({
       method:'post',
       url:`/accounts/${userId}/follow/`,
